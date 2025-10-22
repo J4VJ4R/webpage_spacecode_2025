@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog - SpaceCode (Demo)</title>
+  <link rel="stylesheet" href="/static/blog.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Blog de SpaceCode (Demo)</h1>
+      <p class="lead">Entradas de ejemplo con SQLite y Flask — implementación ligera.</p>
+      <nav><a href="/index.html">Volver al sitio</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% if posts|length == 0 %}
+      <p>No hay publicaciones todavía.</p>
+    {% else %}
+      <section class="posts-grid">
+        {% for p in posts %}
+          <article class="post-card">
+            <a href="{{ url_for('blog_post', post_id=p['id']) }}">
+              <img src="{{ p['image_url'] }}" alt="{{ p['title'] }}" loading="lazy">
+            </a>
+            <div class="post-body">
+              <h2><a href="{{ url_for('blog_post', post_id=p['id']) }}">{{ p['title'] }}</a></h2>
+              <p class="excerpt">{{ p['excerpt'] }}</p>
+              <a class="read-more" href="{{ url_for('blog_post', post_id=p['id']) }}">Leer entrada →</a>
+            </div>
+          </article>
+        {% endfor %}
+      </section>
+    {% endif %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 &lt; SPACECODE /&gt; — Demo blog</div>
+  </footer>
+</body>
+</html>

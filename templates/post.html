@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ post['title'] }} — Blog Demo</title>
+  <link rel="stylesheet" href="/static/blog.css">
+</head>
+<body>
+  <div class="container post-page">
+    <a href="/blog">← Volver al blog</a>
+    <article class="post-full">
+      <h1>{{ post['title'] }}</h1>
+      <p class="meta">Publicado: {{ post['created_at'] }}</p>
+      <img src="{{ post['image_url'] }}" alt="{{ post['title'] }}" loading="lazy">
+      <div class="content">{{ post['content'] }}</div>
+    </article>
+  </div>
+</body>
+</html>
