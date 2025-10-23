@@ -1,4 +1,139 @@
 // ===========================
+// PARTICLES ANIMATION
+// ===========================
+class ParticlesAnimation {
+    constructor() {
+        this.canvas = document.getElementById('particles-canvas');
+        if (!this.canvas) return;
+        
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.particleCount = 80;
+        this.mouse = { x: null, y: null, radius: 150 };
+        
+        this.init();
+        this.animate();
+        this.addEventListeners();
+    }
+    
+    init() {
+        this.resize();
+        this.createParticles();
+    }
+    
+    resize() {
+        this.canvas.width = this.canvas.offsetWidth;
+        this.canvas.height = this.canvas.offsetHeight;
+    }
+    
+    createParticles() {
+        this.particles = [];
+        for (let i = 0; i < this.particleCount; i++) {
+            this.particles.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                size: Math.random() * 3 + 1,
+                opacity: Math.random() * 0.5 + 0.2
+            });
+        }
+    }
+    
+    drawParticles() {
+        this.particles.forEach(particle => {
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(102, 126, 234, ${particle.opacity})`;
+            this.ctx.fill();
+        });
+    }
+    
+    connectParticles() {
+        for (let i = 0; i < this.particles.length; i++) {
+            for (let j = i + 1; j < this.particles.length; j++) {
+                const dx = this.particles[i].x - this.particles[j].x;
+                const dy = this.particles[i].y - this.particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 120) {
+                    this.ctx.beginPath();
+                    this.ctx.strokeStyle = `rgba(102, 126, 234, ${0.2 * (1 - distance / 120)})`;
+                    this.ctx.lineWidth = 0.5;
+                    this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                    this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                    this.ctx.stroke();
+                }
+            }
+        }
+    }
+    
+    updateParticles() {
+        this.particles.forEach(particle => {
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+            
+            // Mouse interaction
+            if (this.mouse.x !== null && this.mouse.y !== null) {
+                const dx = this.mouse.x - particle.x;
+                const dy = this.mouse.y - particle.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < this.mouse.radius) {
+                    const force = (this.mouse.radius - distance) / this.mouse.radius;
+                    const angle = Math.atan2(dy, dx);
+                    particle.vx -= Math.cos(angle) * force * 0.2;
+                    particle.vy -= Math.sin(angle) * force * 0.2;
+                }
+            }
+            
+            // Bounce off edges
+            if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
+            if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
+            
+            // Keep in bounds
+            particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
+            particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
+            
+            // Damping
+            particle.vx *= 0.99;
+            particle.vy *= 0.99;
+        });
+    }
+    
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.drawParticles();
+        this.connectParticles();
+        this.updateParticles();
+        requestAnimationFrame(() => this.animate());
+    }
+    
+    addEventListeners() {
+        window.addEventListener('resize', () => {
+            this.resize();
+            this.createParticles();
+        });
+        
+        window.addEventListener('mousemove', (e) => {
+            const rect = this.canvas.getBoundingClientRect();
+            this.mouse.x = e.clientX - rect.left;
+            this.mouse.y = e.clientY - rect.top;
+        });
+        
+        window.addEventListener('mouseleave', () => {
+            this.mouse.x = null;
+            this.mouse.y = null;
+        });
+    }
+}
+
+// Initialize particles
+document.addEventListener('DOMContentLoaded', () => {
+    new ParticlesAnimation();
+});
+
+// ===========================
 // NAVIGATION
 // ===========================
 const navbar = document.getElementById('navbar');
@@ -327,3 +462,102 @@ if ('serviceWorker' in navigator) {
     //     .then(reg => console.log('Service Worker registered', reg))
     //     .catch(err => console.log('Service Worker registration failed', err));
 }
+
+// ===========================
+// FOOTER CODE ANIMATION
+// ===========================
+class FooterCodeAnimation {
+    constructor() {
+        this.canvas = document.getElementById('footer-code-canvas');
+        if (!this.canvas) return;
+        
+        this.ctx = this.canvas.getContext('2d');
+        this.columns = [];
+        this.fontSize = 14;
+        this.characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789<>{}[]()=/+-*&|!?@#$%^';
+        this.characters += 'const let var function return class import export async await if else';
+        
+        this.init();
+        this.animate();
+        this.addEventListeners();
+    }
+    
+    init() {
+        this.resize();
+        this.createColumns();
+    }
+    
+    resize() {
+        const footer = this.canvas.parentElement;
+        this.canvas.width = footer.offsetWidth;
+        this.canvas.height = footer.offsetHeight;
+        this.cols = Math.floor(this.canvas.width / this.fontSize);
+        this.createColumns();
+    }
+    
+    createColumns() {
+        this.columns = [];
+        for (let i = 0; i < this.cols; i++) {
+            this.columns[i] = {
+                y: Math.random() * this.canvas.height,
+                speed: Math.random() * 0.5 + 0.3,
+                length: Math.random() * 20 + 10
+            };
+        }
+    }
+    
+    drawCode() {
+        // Semi-transparent black to create fade effect
+        this.ctx.fillStyle = 'rgba(15, 23, 42, 0.05)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw code characters
+        this.ctx.font = `${this.fontSize}px monospace`;
+        
+        for (let i = 0; i < this.columns.length; i++) {
+            const column = this.columns[i];
+            
+            // Random character
+            const char = this.characters.charAt(
+                Math.floor(Math.random() * this.characters.length)
+            );
+            
+            // Color gradient based on position
+            const opacity = 1 - (column.y % column.length) / column.length;
+            this.ctx.fillStyle = `rgba(139, 92, 246, ${opacity * 0.8})`;
+            
+            // Draw character
+            this.ctx.fillText(
+                char,
+                i * this.fontSize,
+                column.y
+            );
+            
+            // Move column down
+            column.y += column.speed * this.fontSize;
+            
+            // Reset column if it goes off screen
+            if (column.y > this.canvas.height && Math.random() > 0.975) {
+                column.y = 0;
+                column.speed = Math.random() * 0.5 + 0.3;
+                column.length = Math.random() * 20 + 10;
+            }
+        }
+    }
+    
+    animate() {
+        this.drawCode();
+        requestAnimationFrame(() => this.animate());
+    }
+    
+    addEventListeners() {
+        window.addEventListener('resize', () => {
+            this.resize();
+        });
+    }
+}
+
+// Initialize footer code animation
+document.addEventListener('DOMContentLoaded', () => {
+    new FooterCodeAnimation();
+});

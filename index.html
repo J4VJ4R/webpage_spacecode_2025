@@ -96,7 +96,7 @@
       ],
       "offers": {
         "@type": "AggregateOffer",
-        "offerCount": "4",
+        "offerCount": "5",
         "offers": [
           {
             "@type": "Offer",
@@ -128,6 +128,14 @@
               "@type": "Service",
               "name": "Desarrollo de Aplicaciones Móviles",
               "description": "Apps nativas y multiplataforma para iOS y Android"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Marketing Digital y Pauta Publicitaria",
+              "description": "Campañas publicitarias en Facebook e Instagram para aumentar ventas y captar clientes"
             }
           }
         ]
@@ -233,13 +241,14 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero" aria-label="Sección principal">
         <div class="hero-background" role="presentation"></div>
+        <canvas id="particles-canvas"></canvas>
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
                     <span class="gradient-text">Hacemos herramientas digitales</span>
                     <br>para tu negocio
                 </h1>
-                <p class="hero-subtitle">Te ayudamos a vender más, ahorrar tiempo y atender mejor a tus clientes</p>
+                <p class="hero-subtitle">Te ayudamos a vender más, ahorrar tiempo y atender mejor a tus clientes con software de alto impacto.</p>
                 <div class="hero-buttons">
                     <a href="#contacto" class="btn btn-primary" title="Iniciar tu proyecto de software">Comenzar Proyecto</a>
                     <a href="#productos" class="btn btn-secondary" title="Ver nuestro portafolio de proyectos">Ver Portafolio</a>
@@ -255,8 +264,8 @@
     <section id="servicios" class="services" aria-labelledby="servicios-title">
         <div class="container">
             <div class="section-header">
-                <h2 id="servicios-title" class="section-title">Nuestros Servicios de Desarrollo de Software</h2>
-                <p class="section-subtitle">Trabajamos contigo para crear soluciones a medida en Colombia</p>
+                <h2 id="servicios-title" class="section-title">Nuestros Servicios de Desarrollo y Marketing Digital</h2>
+                <p class="section-subtitle">Soluciones tecnológicas y estrategias publicitarias para hacer crecer tu negocio</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-aos="fade-up" data-delay="0">
@@ -291,6 +300,14 @@
                     <p>Apps nativas y multiplataforma para iOS y Android</p>
                     <a href="#productos" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
                 </div>
+                <div class="service-card" data-aos="fade-up" data-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing Digital</h3>
+                    <p>Estrategias publicitarias en Facebook e Instagram para potenciar tus ventas y generar llamadas</p>
+                    <a href="projects/marketing-digital.html" class="service-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -306,41 +323,91 @@
                 <div class="product-card" data-aos="zoom-in">
                     <div class="product-image">
                         <img src="assets/images/webpage.jpg" alt="Páginas Web">
-                            <div class="product-overlay">
-                                <h3>Páginas Web</h3>
-                                <p>Sitios web corporativos y comerciales</p>
-                                <a href="projects/paginas-web.html" class="btn btn-light">Ver más</a>
-                            </div>
+                        <span class="product-badge">Desarrollo Web</span>
+                        <div class="product-overlay">
+                            <h3>Páginas Web</h3>
+                            <p>Sitios web corporativos y comerciales</p>
+                            <a href="projects/paginas-web.html" class="btn btn-light">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Páginas Web Corporativas</h3>
+                        <p>Sitios web profesionales con diseño responsive, optimizados para SEO y alta conversión.</p>
+                        <a href="projects/paginas-web.html" class="product-link">
+                            Ver detalles <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="100">
                     <div class="product-image">
                         <img src="assets/images/landingpagejpg" alt="Landing Pages">
+                        <span class="product-badge">Marketing</span>
                         <div class="product-overlay">
                             <h3>Landing Pages</h3>
                             <p>Páginas de alta conversión</p>
                             <a href="projects/landing-pages.html" class="btn btn-light">Ver más</a>
                         </div>
                     </div>
+                    <div class="product-info">
+                        <h3>Landing Pages de Alta Conversión</h3>
+                        <p>Páginas enfocadas en resultados con CTAs estratégicos y diseño persuasivo.</p>
+                        <a href="projects/landing-pages.html" class="product-link">
+                            Ver detalles <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="200">
                     <div class="product-image">
                         <img src="assets/images/appweb.jpg" alt="Aplicativos Web">
+                        <span class="product-badge">SaaS</span>
                         <div class="product-overlay">
                             <h3>Aplicativos Web</h3>
                             <p>Sistemas de gestión personalizados</p>
                             <a href="projects/aplicativos-web.html" class="btn btn-light">Ver más</a>
                         </div>
                     </div>
+                    <div class="product-info">
+                        <h3>Sistemas Web a Medida</h3>
+                        <p>Aplicaciones empresariales robustas: CRM, ERP y plataformas personalizadas.</p>
+                        <a href="projects/aplicativos-web.html" class="product-link">
+                            Ver detalles <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="300">
                     <div class="product-image">
                         <img src="assets/images/appmovile.jpg" alt="Aplicaciones Móviles">
+                        <span class="product-badge">Apps Móviles</span>
                         <div class="product-overlay">
                             <h3>Aplicaciones Móviles</h3>
                             <p>Apps iOS y Android</p>
                             <a href="projects/apps-moviles.html" class="btn btn-light">Ver más</a>
                         </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Apps iOS y Android</h3>
+                        <p>Aplicaciones nativas y multiplataforma con diseño intuitivo y rendimiento óptimo.</p>
+                        <a href="projects/apps-moviles.html" class="product-link">
+                            Ver detalles <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-delay="400">
+                    <div class="product-image">
+                        <img src="assets/images/marketing.jpg" alt="Marketing Digital">
+                        <span class="product-badge">Publicidad</span>
+                        <div class="product-overlay">
+                            <h3>Marketing Digital</h3>
+                            <p>Campañas publicitarias efectivas</p>
+                            <a href="projects/marketing-digital.html" class="btn btn-light">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Marketing Digital ROI+</h3>
+                        <p>Campañas en Facebook e Instagram con segmentación precisa y resultados medibles.</p>
+                        <a href="projects/marketing-digital.html" class="product-link">
+                            Ver detalles <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -549,7 +616,6 @@
                         <a href="https://www.youtube.com/channel/UCuMqhrLKHlHkDmX9_KZGxVQ" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.tiktok.com/@spacecode07" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="https://www.instagram.com/spacecodecol" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@spacecode07" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
@@ -580,6 +646,7 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <canvas id="footer-code-canvas"></canvas>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
