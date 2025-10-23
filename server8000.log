@@ -1,0 +1,93 @@
+nohup: no se tendrá en cuenta la entrada
+127.0.0.1 - - [22/Oct/2025 23:25:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:25:50] "GET /assets/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:25:50] "GET /assets/js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Oct/2025 23:25:51] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:25:51] "GET /assets/images/favicon-32x32.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:25:52] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:25:52] "GET /assets/images/favicon-16x16.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:25:52] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:25:52] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:43:55] "HEAD /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:43:55] "HEAD /portfolio.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:43:55] "HEAD /projects/paginas-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:44:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:44:50] "GET /assets/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Oct/2025 23:44:51] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:44:51] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:44:55] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Oct/2025 23:44:56] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:44:56] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:45:04] "GET /portfolio.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:45:27] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:45:27] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:45:29] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Oct/2025 23:45:29] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:45:29] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [22/Oct/2025 23:45:34] "GET /projects/paginas-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:45:58] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [22/Oct/2025 23:45:58] code 404, message File not found
+127.0.0.1 - - [22/Oct/2025 23:45:58] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:03:09] "HEAD /portfolio.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:03:09] "HEAD /projects/paginas-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:03:09] "HEAD /projects/landing-pages.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:03:09] "HEAD /projects/aplicativos-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:03:09] "HEAD /projects/apps-moviles.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:43] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:04:43] "GET /assets/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:04:44] "GET /assets/js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:04:44] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:04:44] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/webpage.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/landingpagejpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/appweb.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/appmovile.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/javi5.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/alejandra.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/juan.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /Vieja%20p%C3%A1gina%20web/SPACECODE%20TECHNOLOGIES_files/arepa.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/webpage.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/landingpagejpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/appmovile.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/appweb.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/javi5.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/alejandra.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /assets/images/juan.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /Vieja%20p%C3%A1gina%20web/SPACECODE%20TECHNOLOGIES_files/arepa.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:52] "GET /Vieja%20p%C3%A1gina%20web/SPACECODE%20TECHNOLOGIES_files/moint.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:04:53] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:04:53] "GET /assets/images/favicon-32x32.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:04:53] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:04:53] "GET /assets/images/favicon-16x16.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:04:53] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:04:53] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:06:10] "HEAD /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/webpage.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/landingpagejpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/appweb.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/appmovile.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/javi5.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/alejandra.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /assets/images/juan.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:43] "GET /Vieja%20p%C3%A1gina%20web/SPACECODE%20TECHNOLOGIES_files/arepa.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:44] "GET /Vieja%20p%C3%A1gina%20web/SPACECODE%20TECHNOLOGIES_files/moint.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:06:47] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:06:47] "GET /assets/images/favicon-32x32.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:06:48] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:06:48] "GET /assets/images/favicon-16x16.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:06:48] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:06:48] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:06:53] "GET /projects/paginas-web.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:06:53] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:06:53] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:12:47] "GET /projects/paginas-web.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:12:47] "GET /assets/css/styles.css HTTP/1.1" 304 -

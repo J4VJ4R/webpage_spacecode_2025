@@ -31,6 +31,13 @@ def blog_index():
     return render_template('blog_list.html', posts=posts)
 
 
+@app.context_processor
+def utility_processor():
+    def static_post_url(post_id):
+        return f"/blog/{post_id}/"
+    return dict(static_post_url=static_post_url)
+
+
 @app.route('/blog/<int:post_id>')
 def blog_post(post_id):
     db = get_db()

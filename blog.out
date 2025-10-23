@@ -1,0 +1,55 @@
+nohup: no se tendrá en cuenta la entrada
+ * Serving Flask app 'blog_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.13:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 893-250-817
+Traceback (most recent call last):
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/blog_app.py", line 31, in blog_index
+    return render_template('blog_list.html', posts=posts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/carlos/Descargas/newwebpage_spacecode/templates/blog_list.html", line 25, in top-level template code
+    <a href="{{ static_post_url(p['id']) }}">
+  File "/home/carlos/Descargas/newwebpage_spacecode/.blogvenv/lib/python3.12/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'static_post_url' is undefined
+127.0.0.1 - - [22/Oct/2025 18:30:01] "[35m[1mHEAD /blog HTTP/1.1[0m" 500 -
+ * Detected change in '/home/carlos/Descargas/newwebpage_spacecode/blog_app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 893-250-817
+127.0.0.1 - - [22/Oct/2025 18:33:00] "HEAD /blog HTTP/1.1" 200 -

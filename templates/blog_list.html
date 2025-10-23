@@ -22,13 +22,13 @@
       <section class="posts-grid">
         {% for p in posts %}
           <article class="post-card">
-            <a href="{{ url_for('blog_post', post_id=p['id']) }}">
+            <a href="{{ static_post_url(p['id']) }}">
               <img src="{{ p['image_url'] }}" alt="{{ p['title'] }}" loading="lazy">
             </a>
             <div class="post-body">
-              <h2><a href="{{ url_for('blog_post', post_id=p['id']) }}">{{ p['title'] }}</a></h2>
+              <h2><a href="{{ static_post_url(p['id']) }}">{{ p['title'] }}</a></h2>
               <p class="excerpt">{{ p['excerpt'] }}</p>
-              <a class="read-more" href="{{ url_for('blog_post', post_id=p['id']) }}">Leer entrada →</a>
+              <a class="read-more" href="{{ static_post_url(p['id']) }}">Leer entrada →</a>
             </div>
           </article>
         {% endfor %}

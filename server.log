@@ -1,0 +1,59 @@
+nohup: no se tendrá en cuenta la entrada
+127.0.0.1 - - [23/Oct/2025 00:25:06] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:25:19] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:25:21] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:25:21] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:25:23] "GET /portfolio.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:28:08] "GET /portfolio.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:28:10] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:28:11] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:28:11] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:28:45] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:28:45] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:28:45] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:28:47] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:28:49] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:28:49] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:28:54] "GET /projects/paginas-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:29:03] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:29:03] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:29:03] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:29:05] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:29:07] "GET /projects/paginas-web.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:29:44] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:29:44] "GET /assets/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:29:45] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:29:45] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:29:48] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:29:52] "GET /projects/landing-pages.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:30:49] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:30:56] "GET /projects/aplicativos-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:31:38] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:31:46] "GET /projects/apps-moviles.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:33:07] "GET /projects/apps-moviles.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:33:42] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:34:12] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:34:13] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:34:13] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 00:35:07] "GET /portfolio.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:35:09] "GET /projects/paginas-web.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 00:35:13] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 00:35:14] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 00:35:14] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 01:18:58] "GET /projects/landing-pages.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 01:18:58] "GET /assets/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 01:18:58] "GET /assets/js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 01:19:40] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 01:19:40] "GET /manifest.json HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 01:19:40] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 01:19:40] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 01:28:44] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 01:28:45] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 01:28:45] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 01:36:20] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 01:36:20] "GET /assets/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [23/Oct/2025 01:36:21] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 01:36:21] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2025 01:39:56] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2025 01:39:57] code 404, message File not found
+127.0.0.1 - - [23/Oct/2025 01:39:57] "GET /assets/images/icon-192x192.png HTTP/1.1" 404 -
