@@ -8,6 +8,278 @@
     <meta name="description" content="Servicios de marketing digital y pauta publicitaria en Facebook e Instagram. Optimiza tus ventas, atrae nuevos clientes y genera más llamadas con nuestras estrategias efectivas.">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos personalizados para Marketing Digital */
+        .marketing-hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .marketing-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .marketing-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85), rgba(118, 75, 162, 0.85));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .marketing-hero-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .marketing-content {
+            display: block !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 2rem !important;
+        }
+        .about-content {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        .about-image {
+            display: none; /* Ocultamos la imagen duplicada */
+        }
+        /* Contenedor específico para los planes - ABSOLUTA PRIORIDAD */
+        .pricing-section {
+            max-width: none !important;
+            width: 100% !important;
+            padding: 3rem 0 !important;
+            margin: 3rem 0 !important;
+            box-sizing: border-box !important;
+            background: #f9fafb;
+        }
+        .pricing-section h2,
+        .pricing-section > p {
+            max-width: 1400px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            padding: 0 2rem !important;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .feature-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        .feature-item h4 {
+            font-size: 1.2rem;
+            color: #1a202c;
+            margin-bottom: 0.75rem;
+        }
+        .feature-item p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .platform-icons {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        .platform-icon-card {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .platform-icon-card:hover {
+            transform: scale(1.1);
+        }
+        .platform-icon-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 3.5rem;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .workflow-steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .workflow-steps li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 4rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .workflow-steps li:last-child {
+            border-bottom: none;
+        }
+        .workflow-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .campaign-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .campaign-type-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .campaign-type-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transform: translateX(5px);
+        }
+        .campaign-type-card i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        /* Estilos para planes de precios en 3 columnas - VERSION 3.0 FINAL */
+        .pricing-grid {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
+            margin: 2rem auto !important;
+            max-width: 1400px !important;
+            width: 100% !important;
+            padding: 0 2rem !important;
+            box-sizing: border-box !important;
+        }
+        @media (min-width: 768px) and (max-width: 999px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+        }
+        @media (min-width: 1000px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2rem !important;
+                max-width: 1400px !important;
+            }
+        }
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 100%;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        /* Estilos adicionales para botones - Asegurar visibilidad */
+        .btn {
+            display: inline-block !important;
+            padding: 1rem 2rem !important;
+            border-radius: 0.5rem !important;
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+            cursor: pointer !important;
+            border: none !important;
+            transition: all 0.3s ease !important;
+            text-decoration: none !important;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+        }
+        .btn-secondary {
+            background: transparent !important;
+            color: #667eea !important;
+            border: 2px solid #667eea !important;
+        }
+        .btn-secondary:hover {
+            background: #667eea !important;
+            color: white !important;
+        }
+        @media (max-width: 768px) {
+            .marketing-hero {
+                height: 300px;
+            }
+            .marketing-hero-overlay h1 {
+                font-size: 1.75rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .platform-icons {
+                gap: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -40,54 +312,99 @@
       <p class="section-subtitle">Estrategias efectivas en Facebook e Instagram para hacer crecer tu negocio</p>
     </header>
 
-    <section class="about">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="../assets/images/marketing.jpg" alt="Marketing Digital" loading="lazy">
+    <!-- Hero Image -->
+    <div class="marketing-hero">
+      <img src="../assets/images/marketing.jpg" alt="Marketing Digital" loading="lazy">
+      <div class="marketing-hero-overlay">
+        <div>
+          <h1>🚀 Impulsa tu Negocio</h1>
+          <p style="font-size: 1.25rem;">Con estrategias publicitarias que generan resultados reales</p>
         </div>
+      </div>
+    </div>
+
+    <section class="about">
+      <div class="marketing-content">
         <div class="about-text">
           <h2>¿Qué es el Marketing Digital?</h2>
           <p>El marketing digital es el conjunto de estrategias y técnicas publicitarias diseñadas para promocionar tu negocio en plataformas digitales, especialmente en redes sociales como <strong>Facebook e Instagram</strong>, donde se encuentra tu audiencia objetivo.</p>
 
-          <h3>¿Qué puede solucionar para tu negocio?</h3>
-          <ul>
-            <li><i class="fas fa-chart-line"></i> <strong>Aumentar tus ventas</strong> – Llegamos a personas interesadas en tus productos/servicios</li>
-            <li><i class="fas fa-users"></i> <strong>Captar nuevos clientes</strong> – Expandimos tu base de clientes potenciales</li>
-            <li><i class="fas fa-phone-volume"></i> <strong>Generar llamadas y consultas</strong> – Pautas optimizadas para contacto directo</li>
-            <li><i class="fas fa-bullseye"></i> <strong>Segmentación precisa</strong> – Tu mensaje llega exactamente a quien debe</li>
-            <li><i class="fas fa-dollar-sign"></i> <strong>Optimización de presupuesto</strong> – Máximo retorno de inversión (ROI)</li>
-            <li><i class="fas fa-eye"></i> <strong>Aumentar visibilidad de marca</strong> – Más personas conocerán tu negocio</li>
-          </ul>
-
-          <h3>Ventajas de nuestras campañas publicitarias</h3>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Campañas diseñadas específicamente para <strong>Facebook e Instagram</strong></li>
-            <li><i class="fas fa-check-circle"></i> Segmentación avanzada por ubicación, edad, intereses y comportamiento</li>
-            <li><i class="fas fa-check-circle"></i> Creatividad profesional: imágenes, videos y copys persuasivos</li>
-            <li><i class="fas fa-check-circle"></i> Análisis y reportes detallados de resultados</li>
-            <li><i class="fas fa-check-circle"></i> Optimización constante para mejorar el rendimiento</li>
-            <li><i class="fas fa-check-circle"></i> A/B Testing para identificar lo que mejor funciona</li>
-            <li><i class="fas fa-check-circle"></i> Gestión de píxel de Facebook para retargeting</li>
-          </ul>
-
-          <h3>Plataformas donde trabajamos</h3>
-          <div style="display: flex; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap;">
-            <div style="text-align: center;">
-              <i class="fab fa-facebook" style="font-size: 3rem; color: #1877f2;"></i>
-              <p style="margin-top: 0.5rem; font-weight: 600;">Facebook Ads</p>
+          <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">¿Qué puede solucionar para tu negocio?</h3>
+          
+          <div class="feature-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Aumentar Ventas</h4>
+              <p>Llegamos a personas realmente interesadas en tus productos o servicios</p>
             </div>
-            <div style="text-align: center;">
-              <i class="fab fa-instagram" style="font-size: 3rem; color: #E4405F;"></i>
-              <p style="margin-top: 0.5rem; font-weight: 600;">Instagram Ads</p>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>Captar Clientes</h4>
+              <p>Expandimos tu base de clientes potenciales constantemente</p>
             </div>
-            <div style="text-align: center;">
-              <i class="fab fa-meta" style="font-size: 3rem; color: #0668E1;"></i>
-              <p style="margin-top: 0.5rem; font-weight: 600;">Meta Business Suite</p>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+              <h4>Generar Llamadas</h4>
+              <p>Pautas optimizadas para contacto directo e inmediato</p>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h4>Segmentación Precisa</h4>
+              <p>Tu mensaje llega exactamente a quien debe recibirlo</p>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h4>Máximo ROI</h4>
+              <p>Optimización de presupuesto para retorno de inversión</p>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h4>Visibilidad de Marca</h4>
+              <p>Más personas conocerán y recordarán tu negocio</p>
             </div>
           </div>
 
-          <h3>Modo de trabajo — Cómo creamos tus campañas</h3>
-          <ol>
+          <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Plataformas donde trabajamos</h3>
+          <div class="platform-icons">
+            <div class="platform-icon-card">
+              <div class="platform-icon-circle">
+                <i class="fab fa-facebook" style="color: #1877f2;"></i>
+              </div>
+              <p style="font-weight: 600; color: #1a202c;">Facebook Ads</p>
+            </div>
+            <div class="platform-icon-card">
+              <div class="platform-icon-circle">
+                <i class="fab fa-instagram" style="color: #E4405F;"></i>
+              </div>
+              <p style="font-weight: 600; color: #1a202c;">Instagram Ads</p>
+            </div>
+            <div class="platform-icon-card">
+              <div class="platform-icon-circle">
+                <i class="fab fa-meta" style="color: #0668E1;"></i>
+              </div>
+              <p style="font-weight: 600; color: #1a202c;">Meta Business Suite</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 3rem;">Modo de trabajo — Cómo creamos tus campañas</h3>
+          <ol class="workflow-steps">
             <li><strong>Análisis inicial:</strong> Estudiamos tu negocio, competencia y audiencia objetivo</li>
             <li><strong>Definición de objetivos:</strong> ¿Buscas ventas, leads, llamadas o reconocimiento de marca?</li>
             <li><strong>Estrategia creativa:</strong> Diseñamos anuncios atractivos con mensajes efectivos</li>
@@ -97,22 +414,216 @@
             <li><strong>Reportes periódicos:</strong> Te mantenemos informado con métricas claras y accionables</li>
           </ol>
 
-          <h3>Tipos de campañas que manejamos</h3>
-          <ul>
-            <li><i class="fas fa-shopping-cart"></i> Campañas de conversión (ventas directas)</li>
-            <li><i class="fas fa-envelope"></i> Generación de leads (formularios de contacto)</li>
-            <li><i class="fas fa-phone-alt"></i> Campañas de llamadas (contacto directo)</li>
-            <li><i class="fas fa-map-marker-alt"></i> Campañas locales (negocios físicos)</li>
-            <li><i class="fas fa-video"></i> Campañas de engagement (interacción con contenido)</li>
-            <li><i class="fas fa-store"></i> Tráfico a sitio web o tienda online</li>
-          </ul>
-
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white; margin: 2rem 0;">
-            <h3 style="color: white; margin-top: 0;">💡 ¿Por qué elegir SpaceCode para tu marketing digital?</h3>
-            <p style="margin-bottom: 0;">Combinamos experiencia técnica con creatividad estratégica. No solo creamos anuncios bonitos, creamos campañas que generan resultados reales: <strong>más ventas, más clientes, más llamadas</strong>. Trabajamos con presupuestos de todos los tamaños y nos enfocamos en tu ROI.</p>
+          <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Tipos de campañas que manejamos</h3>
+          <div class="campaign-types">
+            <div class="campaign-type-card">
+              <i class="fas fa-shopping-cart"></i>
+              <strong>Conversión</strong>
+              <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">Ventas directas</p>
+            </div>
+            <div class="campaign-type-card">
+              <i class="fas fa-envelope"></i>
+              <strong>Generación de Leads</strong>
+              <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">Formularios de contacto</p>
+            </div>
+            <div class="campaign-type-card">
+              <i class="fas fa-phone-alt"></i>
+              <strong>Llamadas</strong>
+              <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">Contacto directo</p>
+            </div>
+            <div class="campaign-type-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Campañas Locales</strong>
+              <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">Negocios físicos</p>
+            </div>
+            <div class="campaign-type-card">
+              <i class="fas fa-video"></i>
+              <strong>Engagement</strong>
+              <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">Interacción con contenido</p>
+            </div>
+            <div class="campaign-type-card">
+              <i class="fas fa-store"></i>
+              <strong>Tráfico Web</strong>
+              <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">A sitio o tienda online</p>
+            </div>
           </div>
 
-          <a href="../index.html#contacto" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Solicitar cotización</a>
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 12px; color: white; margin: 3rem 0; text-align: center;">
+            <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">💡 ¿Por qué elegir SpaceCode?</h3>
+            <p style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.8;">Combinamos experiencia técnica con creatividad estratégica. No solo creamos anuncios bonitos, creamos campañas que generan resultados reales: <strong>más ventas, más clientes, más llamadas</strong>. Trabajamos con presupuestos de todos los tamaños y nos enfocamos en tu ROI.</p>
+          </div>
+
+          <div style="background: #f9fafb; padding: 3rem 0; margin: 3rem 0;">
+            <h2 style="margin: 0 auto 1rem; text-align: center; max-width: 1400px; padding: 0 2rem;">📊 Nuestros Planes de Gestión Mensual</h2>
+            <p style="text-align: center; margin: 0 auto 2.5rem; color: #6b7280; max-width: 1400px; padding: 0 2rem;">Elige el plan que mejor se adapte a tus necesidades y presupuesto</p>
+
+          <div style="display: flex; justify-content: center; gap: 1.5rem; max-width: 1400px; margin: 0 auto; padding: 0 2rem; flex-wrap: wrap;">
+            
+            <!-- Plan Bronce -->
+            <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #cd7f32; position: relative; overflow: visible; flex: 1 1 300px; max-width: 400px;">
+              <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #cd7f32; color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">
+                BRONCE
+              </div>
+              <div style="padding-top: 1rem;">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: #1a202c;">
+                    $250.000
+                    <span style="font-size: 1rem; font-weight: 400; color: #6b7280;">/mes</span>
+                  </div>
+                  <p style="color: #cd7f32; font-weight: 600; margin-top: 0.5rem;">Iniciación y Alcance</p>
+                </div>
+                
+                <div style="background: #f9fafb; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                  <p style="margin: 0; font-size: 0.9rem; color: #4b5563;"><strong>Inversión publicitaria:</strong> $125.000</p>
+                  <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #4b5563;"><strong>Gestión SpaceCode:</strong> $125.000</p>
+                </div>
+
+                <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">✨ Incluye:</h4>
+                <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0;">
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #cd7f32; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>2 campañas optimizadas (Alcance y Crecimiento)</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #cd7f32; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Edición y montaje de 2-3 anuncios</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #cd7f32; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Gestión básica de comunidad</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #cd7f32; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Informe mensual de resultados</span>
+                  </li>
+                </ul>
+
+                                <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; border-left: 4px solid #cd7f32;">
+                  <p style="margin: 0; font-size: 0.85rem; font-weight: 600; color: #92400e;">📈 Proyección:</p>
+                  <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #92400e;">20-50 conversaciones/mes</p>
+                </div>
+
+                <a href="../index.html#contacto" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; text-align: center; display: block; text-decoration: none;">Contratar Plan</a>
+              </div>
+            </div>
+
+            <!-- Plan Plata -->
+            <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 2px solid #c0c0c0; position: relative; overflow: visible; transform: scale(1.05); flex: 1 1 300px; max-width: 400px;">
+              <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #1a202c; padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                ⭐ PLATA - RECOMENDADO
+              </div>
+              <div style="padding-top: 1rem;">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: #1a202c;">
+                    $500.000
+                    <span style="font-size: 1rem; font-weight: 400; color: #6b7280;">/mes</span>
+                  </div>
+                  <p style="color: #6b7280; font-weight: 600; margin-top: 0.5rem;">Crecimiento y Leads</p>
+                </div>
+                
+                <div style="background: #f9fafb; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                  <p style="margin: 0; font-size: 0.9rem; color: #4b5563;"><strong>Inversión publicitaria:</strong> $300.000</p>
+                  <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #4b5563;"><strong>Gestión SpaceCode:</strong> $200.000</p>
+                </div>
+
+                <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">✨ Incluye:</h4>
+                <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0;">
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #667eea; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>3-4 campañas (Seguidores, Interacción y Leads)</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #667eea; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Edición y montaje de 4-6 anuncios</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #667eea; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Optimización quincenal</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #667eea; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Informe mensual detallado</span>
+                  </li>
+                </ul>
+
+                <div style="background: #dbeafe; padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
+                  <p style="margin: 0; font-size: 0.85rem; font-weight: 600; color: #1e40af;">📈 Proyección:</p>
+                  <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #1e40af;">50-100 clientes potenciales/mes</p>
+                </div>
+
+                <a href="../index.html#contacto" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; text-align: center; display: block; text-decoration: none;">Contratar Plan</a>
+              </div>
+            </div>
+
+            <!-- Plan Oro -->
+            <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #ffd700; position: relative; overflow: visible; flex: 1 1 300px; max-width: 400px;">
+              <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1a202c; padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(255,215,0,0.3);">
+                👑 ORO
+              </div>
+              <div style="padding-top: 1rem;">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: #1a202c;">
+                    $1.000.000
+                    <span style="font-size: 1rem; font-weight: 400; color: #6b7280;">/mes</span>
+                  </div>
+                  <p style="color: #d97706; font-weight: 600; margin-top: 0.5rem;">Aceleración y Ventas</p>
+                </div>
+                
+                <div style="background: #f9fafb; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                  <p style="margin: 0; font-size: 0.9rem; color: #4b5563;"><strong>Inversión publicitaria:</strong> $650.000</p>
+                  <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #4b5563;"><strong>Gestión SpaceCode:</strong> $350.000</p>
+                </div>
+
+                <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">✨ Incluye:</h4>
+                <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0;">
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #ffd700; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Campañas continuas multiobjetivo + Retargeting</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #ffd700; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Edición de 8-10 anuncios (Reels/Stories)</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #ffd700; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Pruebas A/B avanzadas</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #ffd700; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Optimización semanal</span>
+                  </li>
+                  <li style="padding: 0.5rem 0; display: flex; align-items: start;">
+                    <i class="fas fa-check" style="color: #ffd700; margin-right: 0.75rem; margin-top: 0.25rem;"></i>
+                    <span>Informe quincenal + reunión estratégica</span>
+                  </li>
+                </ul>
+
+                <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; border-left: 4px solid #ffd700;">
+                  <p style="margin: 0; font-size: 0.85rem; font-weight: 600; color: #92400e;">📈 Proyección:</p>
+                  <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #92400e;">100-150+ conversaciones/semana</p>
+                </div>
+
+                <a href="../index.html#contacto" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; text-align: center; display: block; text-decoration: none; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1a202c;">Contratar Plan</a>
+              </div>
+            </div>
+
+          </div>
+          </div>
+
+          <div style="background: #f3f4f6; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+            <h3 style="margin-top: 0; color: #1a202c;">📋 Metodología de Trabajo</h3>
+            <p><strong>Provisión de Material:</strong> El cliente proporciona material audiovisual base (fotografías y videos en alta calidad).</p>
+            <p><strong>Gestión y Optimización:</strong> SpaceCode se encarga de la estrategia, edición, diseño gráfico, copywriting y optimización de campañas.</p>
+            
+            <h4 style="margin-top: 1.5rem;">💳 Condiciones Comerciales:</h4>
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li><strong>Forma de pago:</strong> 50% anticipo + 50% al finalizar el mes contra entrega de informe</li>
+              <li><strong>Requisito inicial:</strong> Acceso al Business Manager de Meta y material audiovisual</li>
+              <li><strong>Exclusiones:</strong> Producción audiovisual profesional, CRM y herramientas de terceros</li>
+            </ul>
+          </div>
+
+          <a href="../index.html#contacto" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Solicitar cotización personalizada</a>
         </div>
       </div>
     </section>
