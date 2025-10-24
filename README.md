@@ -167,6 +167,18 @@ Ver detalles completos en `SEO_AUDIT_REPORT.md`
 
 ## 📝 Changelog
 
+### v2.1 - 24 Octubre 2025
+- ✨ **Marketing Digital Redesign**: Layout 3 columnas responsive para planes de precios
+- 🎨 Hero section con imagen y overlay gradient (400px)
+- 🔵 6 características con iconos circulares gradient (80px)
+- 📱 Iconos de plataformas: Facebook, Instagram, Meta (100px circles)
+- 🔢 Flujo de trabajo numerado con CSS counter (7 pasos)
+- 📊 6 tipos de campañas en grid layout
+- 💰 3 planes de precios (Bronce $250k, Plata $500k, Oro $1M COP/mes)
+- 📱 Flexbox responsive: 1 columna móvil → 2 columnas tablet → 3 columnas desktop
+- 🔗 Agregado LinkedIn de Fernanda Naranjo en sección de equipo
+- 🐛 Corregido HTML mal cerrado en pricing cards
+
 ### v2.0 - Octubre 2025
 - ✅ Rediseño completo del sitio
 - ✅ Agregado servicio de Marketing Digital
