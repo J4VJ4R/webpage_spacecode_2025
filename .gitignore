@@ -1,0 +1,41 @@
+# Logs
+*.log
+server*.log
+
+# Python
+*.py
+*.pyc
+__pycache__/
+*.db
+*.out
+*_requirements.txt
+venv/
+env/
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Temporal files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Build directories
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*~
+*.bak
+
+# Test files
+test/
+tests/
