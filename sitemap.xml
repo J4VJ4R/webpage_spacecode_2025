@@ -1,27 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Homepage -->
+  <!-- ========================================
+       PÁGINAS PRINCIPALES - ESPAÑOL
+       ======================================== -->
+  
+  <!-- Homepage Spanish -->
   <url>
     <loc>https://spacecode.com.co/</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/" />
   </url>
   
-  <!-- Portfolio Page -->
+  <!-- Portfolio Page Spanish -->
   <url>
     <loc>https://spacecode.com.co/portfolio.html</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/portfolio.html" />
   </url>
+  
+  <!-- ========================================
+       PÁGINAS PRINCIPALES - ENGLISH
+       ======================================== -->
+  
+  <!-- Homepage English -->
+  <url>
+    <loc>https://spacecode.com.co/en/</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/" />
+  </url>
+  
+  <!-- Portfolio Page English -->
+  <url>
+    <loc>https://spacecode.com.co/en/portfolio.html</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/portfolio.html" />
+  </url>
+  
+  <!-- ========================================
+       SECCIONES INTERNAS - ESPAÑOL
+       ======================================== -->
   
   <!-- Servicios -->
   <url>
     <loc>https://spacecode.com.co/#servicios</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,7 +70,7 @@
   <!-- Productos/Portafolio -->
   <url>
     <loc>https://spacecode.com.co/#productos</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,7 +78,7 @@
   <!-- Equipo -->
   <url>
     <loc>https://spacecode.com.co/#equipo</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -45,7 +86,7 @@
   <!-- Nosotros -->
   <url>
     <loc>https://spacecode.com.co/#nosotros</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -53,7 +94,7 @@
   <!-- Testimonios -->
   <url>
     <loc>https://spacecode.com.co/#testimonios</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -61,45 +102,131 @@
   <!-- Contacto -->
   <url>
     <loc>https://spacecode.com.co/#contacto</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Project Pages -->
+  <!-- ========================================
+       PÁGINAS DE SERVICIOS - ESPAÑOL
+       ======================================== -->
+  
+  <!-- Páginas Web -->
   <url>
     <loc>https://spacecode.com.co/projects/paginas-web.html</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/paginas-web.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/web-pages.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/paginas-web.html" />
   </url>
   
+  <!-- Landing Pages -->
   <url>
     <loc>https://spacecode.com.co/projects/landing-pages.html</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/landing-pages.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/landing-pages.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/landing-pages.html" />
   </url>
   
+  <!-- Aplicativos Web -->
   <url>
     <loc>https://spacecode.com.co/projects/aplicativos-web.html</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
   
+  <!-- ========================================
+       RECURSOS EXTERNOS
+       ======================================== -->
+  
+  <!-- Blog (External) -->
   <url>
-    <loc>https://spacecode.com.co/projects/apps-moviles.html</loc>
-    <lastmod>2025-10-23</lastmod>
+    <loc>https://blogposts.spacecode.com.co/</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Portfolio (External) -->
+  <url>
+    <loc>https://portfolio.spacecode.com.co/</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+</urlset>rketing Digital -->
   <url>
     <loc>https://spacecode.com.co/projects/marketing-digital.html</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/marketing-digital.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/digital-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/marketing-digital.html" />
+  </url>
+  
+  <!-- ========================================
+       PÁGINAS DE SERVICIOS - ENGLISH
+       ======================================== -->
+  
+  <!-- Web Pages -->
+  <url>
+    <loc>https://spacecode.com.co/en/projects/web-pages.html</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/paginas-web.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/web-pages.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/paginas-web.html" />
+  </url>
+  
+  <!-- Landing Pages -->
+  <url>
+    <loc>https://spacecode.com.co/en/projects/landing-pages.html</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/landing-pages.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/landing-pages.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/landing-pages.html" />
+  </url>
+  
+  <!-- Web Applications -->
+  <url>
+    <loc>https://spacecode.com.co/en/projects/web-applications.html</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/aplicativos-web.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/web-applications.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/aplicativos-web.html" />
+  </url>
+  
+  <!-- Mobile Apps -->
+  <url>
+    <loc>https://spacecode.com.co/en/projects/mobile-apps.html</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/apps-moviles.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/mobile-apps.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/apps-moviles.html" />
+  </url>
+  
+  <!-- Digital Marketing -->
+  <url>
+    <loc>https://spacecode.com.co/en/projects/digital-marketing.html</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://spacecode.com.co/projects/marketing-digital.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://spacecode.com.co/en/projects/digital-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spacecode.com.co/projects/marketing-digital.html" />
   </url>
   
   <!-- Blog (External) -->
