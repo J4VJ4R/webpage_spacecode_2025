@@ -263,32 +263,11 @@ animatedElements.forEach(element => {
 // ===========================
 // CONTACT FORM
 // ===========================
-const contactForm = document.getElementById('contactForm');
+// CONTACT FORM - Ahora manejado por contact-form.js
+// El formulario envía emails a info@spacecode.com.co vía send-email.php
+// ===========================
 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const phone = formData.get('phone');
-        const message = formData.get('message');
-        
-        // Create WhatsApp message
-        const whatsappMessage = `Hola! Mi nombre es ${name}.%0A%0AEmail: ${email}%0ATelefono: ${phone}%0A%0AMensaje: ${message}`;
-        const whatsappURL = `https://wa.me/573144495813?text=${whatsappMessage}`;
-        
-        // Open WhatsApp
-        window.open(whatsappURL, '_blank');
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Show success message
-        showNotification('¡Gracias! Te redirigiremos a WhatsApp para continuar la conversación.');
-    });
-}
+// Código eliminado - Ver assets/js/contact-form.js para la implementación actual
 
 // ===========================
 // NOTIFICATION SYSTEM
