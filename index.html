@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-19JVD59Q4W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-19JVD59Q4W');
-    </script>
-    
     <!-- Meta Tags Básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,9 +71,15 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome - Diferido para no bloquear render -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     
     <!-- Schema.org Markup (JSON-LD) -->
     <script type="application/ld+json">
@@ -351,7 +348,7 @@
             <div class="products-grid">
                 <div class="product-card" data-aos="zoom-in">
                     <div class="product-image">
-                        <img src="assets/images/webpage.jpg" alt="Páginas Web">
+                        <img src="assets/images/webpage.jpg" alt="Páginas Web" loading="lazy" width="400" height="300">
                         <span class="product-badge">Desarrollo Web</span>
                         <div class="product-overlay">
                             <h3>Páginas Web</h3>
@@ -369,7 +366,7 @@
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="100">
                     <div class="product-image">
-                        <img src="assets/images/landingpagejpg" alt="Landing Pages">
+                        <img src="assets/images/landingpagejpg" alt="Landing Pages" loading="lazy" width="400" height="300">
                         <span class="product-badge">Marketing</span>
                         <div class="product-overlay">
                             <h3>Landing Pages</h3>
@@ -387,7 +384,7 @@
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="200">
                     <div class="product-image">
-                        <img src="assets/images/appweb.jpg" alt="Aplicativos Web">
+                        <img src="assets/images/appweb.jpg" alt="Aplicativos Web" loading="lazy" width="400" height="300">
                         <span class="product-badge">SaaS</span>
                         <div class="product-overlay">
                             <h3>Aplicativos Web</h3>
@@ -405,7 +402,7 @@
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="300">
                     <div class="product-image">
-                        <img src="assets/images/appmovile.jpg" alt="Aplicaciones Móviles">
+                        <img src="assets/images/appmovile.jpg" alt="Aplicaciones Móviles" loading="lazy" width="400" height="300">
                         <span class="product-badge">Apps Móviles</span>
                         <div class="product-overlay">
                             <h3>Aplicaciones Móviles</h3>
@@ -423,7 +420,7 @@
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-delay="400">
                     <div class="product-image">
-                        <img src="assets/images/marketing.jpg" alt="Marketing Digital">
+                        <img src="assets/images/marketing.jpg" alt="Marketing Digital" loading="lazy" width="400" height="300">
                         <span class="product-badge">Publicidad</span>
                         <div class="product-overlay">
                             <h3>Marketing Digital</h3>
@@ -453,7 +450,7 @@
             <div class="team-grid">
                 <div class="team-member" data-aos="fade-up">
                     <div class="member-image">
-                        <img src="assets/images/javi5.png" alt="Javier Jaramillo">
+                        <img src="assets/images/javi5.png" alt="Javier Jaramillo" loading="lazy" width="300" height="300">
                         <div class="member-overlay">
                             <div class="member-social">
                                 <a href="https://www.linkedin.com/in/javier-fullstack/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -470,7 +467,7 @@
                 </div>
                 <div class="team-member" data-aos="fade-up" data-delay="100">
                     <div class="member-image">
-                        <img src="assets/images/alejandra.png" alt="Alejandra">
+                        <img src="assets/images/alejandra.png" alt="Alejandra" loading="lazy" width="300" height="300">
                         <div class="member-overlay">
                             <div class="member-social">
                                 <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -487,7 +484,7 @@
                 </div>
                 <div class="team-member" data-aos="fade-up" data-delay="200">
                     <div class="member-image">
-                        <img src="assets/images/juan.png" alt="Juan David Velasquez">
+                        <img src="assets/images/juan.png" alt="Juan David Velasquez" loading="lazy" width="300" height="300">
                         <div class="member-overlay">
                             <div class="member-social">
                                 <a href="https://www.linkedin.com/in/juan-david-velasquez-salgado-12411215a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -504,7 +501,7 @@
                 </div>
                 <div class="team-member" data-aos="fade-up" data-delay="300">
                     <div class="member-image">
-                        <img src="assets/images/fersinia.webp" alt="Fernanda Naranjo">
+                        <img src="assets/images/fersinia.webp" alt="Fernanda Naranjo" loading="lazy" width="300" height="300">
                         <div class="member-overlay">
                             <div class="member-social">
                                 <a href="https://www.linkedin.com/in/fernanda-naranjo-742471182/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -571,7 +568,7 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card" data-aos="flip-left">
                     <div class="testimonial-header">
-                        <img src="assets/images/arepa.jpg" alt="Cliente" class="testimonial-avatar">
+                        <img src="assets/images/arepa.jpg" alt="Cliente" class="testimonial-avatar" loading="lazy" width="100" height="100">
                         <div class="testimonial-author">
                             <h4>Viviana J.</h4>
                             <div class="rating">
@@ -587,7 +584,7 @@
                 </div>
                 <div class="testimonial-card" data-aos="flip-left" data-delay="100">
                     <div class="testimonial-header">
-                        <img src="assets/images/moint.jpeg" alt="Cliente" class="testimonial-avatar">
+                        <img src="assets/images/moint.jpeg" alt="Cliente" class="testimonial-avatar" loading="lazy" width="100" height="100">
                         <div class="testimonial-author">
                             <h4>Edgar O.</h4>
                             <div class="rating">
@@ -603,7 +600,7 @@
                 </div>
                 <div class="testimonial-card" data-aos="flip-left" data-delay="200">
                     <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/100?img=68" alt="Cliente" class="testimonial-avatar">
+                        <img src="https://i.pravatar.cc/100?img=68" alt="Cliente" class="testimonial-avatar" loading="lazy" width="100" height="100">
                         <div class="testimonial-author">
                             <h4>Hugo D.</h4>
                             <div class="rating">
@@ -744,7 +741,17 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/contact-form.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/contact-form.js" defer></script>
+    
+    <!-- Google Analytics (al final para no bloquear) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-19JVD59Q4W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-19JVD59Q4W');
+    </script>
 </body>
 </html>
