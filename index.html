@@ -16,9 +16,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Title & Description (SEO Fundamental) -->
-    <title>SpaceCode Technologies | Desarrollo de Software Profesional en Colombia</title>
-    <meta name="description" content="Empresa líder en desarrollo de software en Colombia. Creamos páginas web, aplicaciones móviles y aplicativos web personalizados. Soluciones tecnológicas innovadoras desde 2019. ¡Cotiza ahora!">
-    <meta name="keywords" content="desarrollo de software, desarrollo web Colombia, aplicaciones móviles, landing pages, aplicativos web, páginas web profesionales, desarrollo de apps, empresa de software, soluciones tecnológicas, SpaceCode Technologies">
+    <title>SpaceCode Technologies | Desarrollo de Software Profesional en Colombia, México y Estados Unidos.</title>
+    <meta name="description" content="Empresa líder en desarrollo de software en Colombia, México y Estados Unidos. Creamos páginas web, aplicaciones móviles y aplicativos web personalizados. Soluciones tecnológicas innovadoras desde 2019. ¡Cotiza ahora!">
+    <meta name="keywords" content="desarrollo de software, desarrollo web Colombia, México, Estados Unidos, aplicaciones móviles, landing pages, aplicativos web, páginas web profesionales, desarrollo de apps, empresa de software, soluciones tecnológicas, SpaceCode Technologies">
     
     <!-- Autor y Copyright -->
     <meta name="author" content="SpaceCode Technologies">
@@ -56,7 +56,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://spacecode.com.co/">
     <meta name="twitter:title" content="SpaceCode Technologies | Desarrollo de Software Profesional">
-    <meta name="twitter:description" content="Empresa líder en desarrollo de software en Colombia. Páginas web, aplicaciones móviles y aplicativos personalizados.">
+    <meta name="twitter:description" content="Empresa líder en desarrollo de software en Colombia, México y Estados Unidos. Páginas web, aplicaciones móviles y aplicativos personalizados.">
     <meta name="twitter:image" content="https://spacecode.com.co/assets/images/twitter-card.jpg">
     <meta name="twitter:site" content="@SpacecodeCol">
     <meta name="twitter:creator" content="@SpacecodeCol">
@@ -665,20 +665,23 @@
                     </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm">
+                    <form id="contactForm" action="send-email.php" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required minlength="2">
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" name="email" placeholder="Tu email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono">
+                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" pattern="[0-9\s\+\-\(\)]+">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required minlength="10"></textarea>
                         </div>
+                        <!-- Honeypot anti-spam (oculto para usuarios reales) -->
+                        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                         <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                        <div id="formMessage" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
                     </form>
                     <a href="https://wa.me/13054826002?text=Buen%20d%C3%ADa,%20mi%20idea%20es%20crear%20un%20sistema%20para" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i> Contactar por WhatsApp
@@ -742,5 +745,6 @@
     </a>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-form.js"></script>
 </body>
 </html>

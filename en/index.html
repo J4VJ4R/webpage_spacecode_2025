@@ -22,9 +22,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Title & Description (SEO Fundamental) -->
-    <title>SpaceCode Technologies | Professional Software Development in Colombia</title>
-    <meta name="description" content="Leading software development company in Colombia. We create websites, mobile applications, and custom web applications. Innovative technology solutions since 2019. Get a quote now!">
-    <meta name="keywords" content="software development, web development Colombia, mobile applications, landing pages, web applications, professional websites, app development, software company, technology solutions, SpaceCode Technologies">
+    <title>SpaceCode Technologies | Professional Software Development in Colombia, México y Estados Unidos.</title>
+    <meta name="description" content="Leading software development company in Colombia, México and the United States. We create websites, mobile applications, and custom web applications. Innovative technology solutions since 2019. Get a quote now!">
+    <meta name="keywords" content="software development, web development Colombia, Mexico, the United States, mobile applications, landing pages, web applications, professional websites, app development, software company, technology solutions, SpaceCode Technologies">
     
     <!-- Author and Copyright -->
     <meta name="author" content="SpaceCode Technologies">
@@ -665,20 +665,23 @@
                     </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm">
+                    <form id="contactForm" action="../send-email.php" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <input type="text" id="name" name="name" placeholder="Your name" required minlength="2">
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" name="email" placeholder="Your email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your phone">
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone" pattern="[0-9\s\+\-\(\)]+">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message" required minlength="10"></textarea>
                         </div>
+                        <!-- Honeypot anti-spam (hidden for real users) -->
+                        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        <div id="formMessage" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
                     </form>
                     <a href="https://wa.me/13054826002?text=Good%20day,%20my%20idea%20is%20to%20create%20a%20system%20to" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i> Contact via WhatsApp
@@ -740,5 +743,6 @@
     </a>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/contact-form.js"></script>
 </body>
 </html>
